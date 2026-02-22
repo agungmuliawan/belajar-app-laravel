@@ -12,7 +12,16 @@
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/mahasiswa">Mahasiswa</a>
+                    <a class="nav-link" href="/mahasiswa">Data Mahasiswa</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="/mahasiswa2">Controller</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mahasiswa2/create">Form Input</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mahasiswa3">CRUD Mahasiswa</a>
                 </li>
             </ul>
         </div>
