@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 22 Feb 2026 pada 05.23
+-- Waktu pembuatan: 26 Feb 2026 pada 14.55
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -116,8 +116,28 @@ CREATE TABLE `mahasiswas` (
 --
 
 INSERT INTO `mahasiswas` (`id`, `nama`, `nim`, `jurusan`, `created_at`, `updated_at`) VALUES
-(2, '1', '1231', '1', '2026-02-21 21:03:03', '2026-02-21 21:03:03'),
-(3, 'a', 'a', 'a1', '2026-02-21 21:09:06', '2026-02-21 21:09:14');
+(3, 'a', 'a', 'a1', '2026-02-21 21:09:06', '2026-02-21 21:09:14'),
+(4, 'aaaa', '1111', '123', '2026-02-26 02:58:31', '2026-02-26 02:58:31'),
+(5, 'Dr. Annabell Dietrich MD', '20242574', 'Teknik Elektro', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(6, 'Prof. Adrianna Murazik', '20245787', 'Akuntansi', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(7, 'Mr. Abelardo VonRueden', '20240828', 'Akuntansi', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(8, 'Brandi Sipes', '20246428', 'Manajemen', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(9, 'Ricardo Deckow', '20242099', 'Teknik Informatika', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(10, 'Catherine Ziemann PhD', '20241683', 'Teknik Informatika', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(11, 'Lyric Pfannerstill', '20247125', 'Teknik Elektro', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(12, 'Ms. Elsie Ziemann PhD', '20240809', 'Sistem Informasi', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(13, 'Katlynn Durgan', '20248005', 'Teknik Elektro', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(14, 'Marlin Raynor', '20240052', 'Teknik Elektro', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(15, 'Emie Treutel', '20249322', 'Akuntansi', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(16, 'Dr. Tobin Bashirian', '20244889', 'Sistem Informasi', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(17, 'Dr. Morton Kessler', '20249513', 'Sistem Informasi', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(18, 'Axel Balistreri', '20241394', 'Teknik Elektro', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(19, 'Katlynn Rice', '20246058', 'Manajemen', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(20, 'Rudy O\'Connell', '20240276', 'Teknik Informatika', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(21, 'Mekhi Lynch', '20240493', 'Teknik Elektro', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(22, 'Laney Romaguera', '20249017', 'Sistem Informasi', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(23, 'Joshua Langosh', '20248540', 'Akuntansi', '2026-02-26 06:53:06', '2026-02-26 06:53:06'),
+(24, 'Wilhelmine Gleason', '20240500', 'Teknik Elektro', '2026-02-26 06:53:06', '2026-02-26 06:53:06');
 
 -- --------------------------------------------------------
 
@@ -173,7 +193,10 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('eD7MMrYhDv9bhPBdpn5Gw3TE4mWdZRYB3pBTzJYi', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiOUxWRzJza0ZRSWVRVnVCTUlJNDdrZTZEVWxYMmR2SENEWnRxS2xROCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9tYWhhc2lzd2EzIjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1771733354);
+('aCb9Tv2e8oB39RkLjz9GY14iikuoOnNRwIfxJiGK', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiakhoVnBSMU5iY053Qm5abkxjSzBsNDdRYWtUeG5iWW1yak1yWWFwdSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9tYWhhc2lzd2EzIjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1772114075),
+('eD7MMrYhDv9bhPBdpn5Gw3TE4mWdZRYB3pBTzJYi', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiOUxWRzJza0ZRSWVRVnVCTUlJNDdrZTZEVWxYMmR2SENEWnRxS2xROCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9tYWhhc2lzd2EzIjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1771733354),
+('FbpX4EPjsOE1YJR8RgrlOxEzx7Wa7oddinOiw8Rm', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiYXRIdmhEQ0JuT3F6N0dWYUo2Yms2UVpTeGhXRTBLUnoxNUQxdlhaUiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDA6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9tYWhhc2lzd2EzL2NyZWF0ZTIiO3M6NToicm91dGUiO047fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1772101420),
+('JgBfXnyhD7zIyGVYHKl0upJlTtguQp9zNPnqUXQf', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiRmpGV0pERlhJTGg5R0J5aTN5RGlVdlozSjVBUGx2RlRXd0Rqb0NEVSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1772099816);
 
 -- --------------------------------------------------------
 
@@ -191,6 +214,13 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Test User', 'test@example.com', '2026-02-26 06:53:06', '$2y$12$7wmOGOmwPKyIt1DSI3aTD.Fb.9FJFPLv0Cu15hhAwcjmCNnR6CTMq', 'Rd6dVQR4xb', '2026-02-26 06:53:07', '2026-02-26 06:53:07');
 
 --
 -- Indexes for dumped tables
@@ -284,7 +314,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT untuk tabel `mahasiswas`
 --
 ALTER TABLE `mahasiswas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT untuk tabel `migrations`
@@ -296,7 +326,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
