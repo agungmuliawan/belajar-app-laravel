@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MahasiswaController extends Controller
 {
@@ -46,16 +47,16 @@ function crud()
         return view('inputan2');
     }
 
-        public function store2(Request $request)
-        {
-            Mahasiswa::create([
-                'nama'    => $request->nama,
-                'nim'     => $request->nim,
-                'jurusan' => $request->jurusan,
-            ]);
-    
-            return redirect('/mahasiswa3');
-        }
+        public function store3(Request $request)
+{
+    DB::table('mahasiswas')->insert([
+        'nama'    => $request->nama,
+        'nim'     => $request->nim,
+        'jurusan' => $request->jurusan,
+    ]);
+
+    return redirect('/mahasiswa4')->with('success', 'Data berhasil ditambahkan!');
+}
 
    public function edit($id)
     {
@@ -82,5 +83,44 @@ function crud()
         Mahasiswa::find($id)->delete();
         return redirect('/mahasiswa3');
     }
-    
+
+    //crud mahasiswa query builder 3
+    function crud3()
+    {
+        $mahasiswas = DB::table('mahasiswas')->get();
+        return view('mahasiswa4', compact('mahasiswas')); 
+    }
+
+    public function store4(Request $request)
+{
+    DB::table('mahasiswas')->insert([
+        'nama'    => $request->nama,
+        'nim'     => $request->nim,
+        'jurusan' => $request->jurusan,
+    ]);
+
+    return redirect('/mahasiswa4')->with('success', 'Data berhasil ditambahkan!');
+}
+function destroy3($id)
+    {
+        DB::table('mahasiswas')->where('id', $id)->delete();
+        return redirect('/mahasiswa4')->with('success', 'Data berhasil dihapus!');
+    }
+
+    public function edit3($id)
+    {
+        $mhs = DB::table('mahasiswas')->where('id', $id)->first();
+        return view('edit3', compact('mhs'));
+    }
+
+    public function update3(Request $request, $id)
+    {
+        DB::table('mahasiswas')->where('id', $id)->update([
+            'nama'    => $request->nama,
+            'nim'     => $request->nim,
+            'jurusan' => $request->jurusan,
+        ]);
+
+        return redirect('/mahasiswa4')->with('success', 'Data berhasil diupdate!');
+    }
 }

@@ -16,12 +16,20 @@ Route::get('/mahasiswa2', [MahasiswaController::class, 'index']);
 Route::get('/mahasiswa2/create', [MahasiswaController::class, 'create']);
 Route::post('/mahasiswa2/store', [MahasiswaController::class, 'store']);
 
-//crud mahasiswa
+//crud mahasiswa eloquent
 Route::get('/mahasiswa3', [MahasiswaController::class, 'crud']);
 Route::get('/mahasiswa3/create2', [MahasiswaController::class, 'create2']);
 Route::post('/mahasiswa3/store2', [MahasiswaController::class, 'store2']);
 Route::get('/mahasiswa3/edit/{id}', [MahasiswaController::class, 'edit']);
 Route::post('/mahasiswa3/update/{id}', [MahasiswaController::class, 'update']);
 Route::get('/mahasiswa3/delete/{id}', [MahasiswaController::class, 'destroy']);
+
+//crud mahasiswa query builder 3
+Route::get('/mahasiswa4', [MahasiswaController::class, 'crud3']);
+//Route::get('/mahasiswa4/create2', [MahasiswaController::class, 'create3']);
+Route::post('/mahasiswa4/store4', [MahasiswaController::class, 'store4']);
+Route::get('/mahasiswa4/edit/{id}', [MahasiswaController::class, 'edit3']);
+Route::post('/mahasiswa4/update/{id}', [MahasiswaController::class, 'update3']);
+Route::get('/mahasiswa4/delete/{id}', [MahasiswaController::class, 'destroy3']);
 ?>
 

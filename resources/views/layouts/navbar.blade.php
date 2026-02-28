@@ -21,7 +21,10 @@
                     <a class="nav-link" href="/mahasiswa2/create">Form Input</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/mahasiswa3">CRUD Mahasiswa</a>
+                    <a class="nav-link" href="/mahasiswa3">CRUD Eloquent </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mahasiswa4">CRUD Query Builder </a>
                 </li>
             </ul>
         </div>
