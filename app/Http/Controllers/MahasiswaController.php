@@ -25,6 +25,21 @@ class MahasiswaController extends Controller
     {
         return view('inputan1');
     }
+    public function store2(Request $request)
+    {
+        $nama    = $request->nama;
+        $nim     = $request->nim;
+        $jurusan = $request->jurusan;
+
+
+        Mahasiswa::create([
+            'nama'    => $nama,
+            'nim'     => $nim,
+            'jurusan' => $jurusan,
+        ]);
+
+        return redirect('/mahasiswa3')->with('success', 'Data berhasil ditambahkan!');
+    }
     public function store(Request $request)
 {
     // Ambil data dari form
