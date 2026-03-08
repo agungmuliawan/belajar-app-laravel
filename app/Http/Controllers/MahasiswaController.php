@@ -26,20 +26,23 @@ class MahasiswaController extends Controller
         return view('inputan1');
     }
     public function store2(Request $request)
-    {
-        $nama    = $request->nama;
-        $nim     = $request->nim;
-        $jurusan = $request->jurusan;
+{
+    $request->validate([
+        'nama'    => 'required|string|max:100',
+        'nim'     => 'required|string|max:20|unique:mahasiswas,nim',
+        'jurusan' => 'required|string|max:100',
+    ], [
+        'nama.required'    => 'Nama wajib diisi.',
+        'nim.required'     => 'NIM wajib diisi.',
+        'nim.unique'       => 'NIM sudah terdaftar.',
+        'jurusan.required' => 'Jurusan wajib diisi.',
+    ]);
 
+    // Simpan data...
+    Mahasiswa::create($request->only('nama', 'nim', 'jurusan'));
 
-        Mahasiswa::create([
-            'nama'    => $nama,
-            'nim'     => $nim,
-            'jurusan' => $jurusan,
-        ]);
-
-        return redirect('/mahasiswa3')->with('success', 'Data berhasil ditambahkan!');
-    }
+    return redirect('/mahasiswa3')->with('success', 'Data berhasil disimpan!');
+}
     public function store(Request $request)
 {
     // Ambil data dari form
