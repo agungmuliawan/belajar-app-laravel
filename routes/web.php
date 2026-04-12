@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FileController;  
 use App\Http\Controllers\MahasiswaController;
 
 Route::get('/', function () {
@@ -31,5 +32,13 @@ Route::post('/mahasiswa4/store4', [MahasiswaController::class, 'store4']);
 Route::get('/mahasiswa4/edit/{id}', [MahasiswaController::class, 'edit3']);
 Route::post('/mahasiswa4/update/{id}', [MahasiswaController::class, 'update3']);
 Route::get('/mahasiswa4/delete/{id}', [MahasiswaController::class, 'destroy3']);
+
+
+// routes/web.php
+Route::get('/files', [FileController::class, 'index'])->name('files.index');
+Route::post('/files/upload', [FileController::class, 'upload'])->name('files.upload');
+Route::get('/files/download/{id}', [FileController::class, 'download'])->name('files.download');
+Route::delete('/files/hapus/{id}', [FileController::class, 'hapus'])->name('files.hapus');
+
 ?>
 
