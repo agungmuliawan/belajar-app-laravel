@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileController;  
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\SubmitTugasController;
 
 Route::get('/', function () {
     return view('home');
@@ -40,5 +41,13 @@ Route::post('/files/upload', [FileController::class, 'upload'])->name('files.upl
 Route::get('/files/download/{id}', [FileController::class, 'download'])->name('files.download');
 Route::delete('/files/hapus/{id}', [FileController::class, 'hapus'])->name('files.hapus');
 
+
+// broadcasting tugas
+use App\Http\Controllers\TugasController;
+
+Route::get('/submit-tugas', [SubmitTugasController::class, 'submit']);
+Route::get('/broadcast', function () {
+    return view('broadcast');
+});
 ?>
 
