@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileController;  
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\ImageController;
+
 
 Route::get('/', function () {
     return view('home');
@@ -40,5 +42,10 @@ Route::post('/files/upload', [FileController::class, 'upload'])->name('files.upl
 Route::get('/files/download/{id}', [FileController::class, 'download'])->name('files.download');
 Route::delete('/files/hapus/{id}', [FileController::class, 'hapus'])->name('files.hapus');
 
+Route::get('/files/cetak-pdf', [FileController::class, 'cetakPdf'])->name('files.cetak-pdf');
+
+Route::get('/images', [ImageController::class, 'index'])->name('images.index');
+Route::post('/images/upload', [ImageController::class, 'upload'])->name('images.upload');
+Route::delete('/images/hapus/{id}', [ImageController::class, 'hapus'])->name('images.hapus');
 ?>
 

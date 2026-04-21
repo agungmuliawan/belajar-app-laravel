@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\File;
 
+use Barryvdh\DomPDF\Facade\Pdf;
+
 class FileController extends Controller
 {
     // ========== UPLOAD FILE ==========
@@ -59,4 +61,17 @@ public function upload(Request $request)
 
         return back()->with('sukses', 'File berhasil dihapus!');
     }
+    public function cetakPdf()
+{
+    $files = File::latest()->get();
+
+    $pdf = Pdf::loadView('files.laporan_pdf', compact('files'));
+
+    // langsung download
+    return $pdf->download('laporan-file.pdf');
+
+    // kalau mau tampil di browser dulu, ganti dengan:
+    // return $pdf->stream('laporan-file.pdf');
+}
+
 }

@@ -46,3 +46,5 @@
     </tr>
     @endforeach
 </table>
+
+<a href="{{ route('files.cetak-pdf') }}">Cetak PDF</a>
