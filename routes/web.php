@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileController;  
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\SubmitTugasController; // Pastikan untuk mengimpor controller yang telah dibuat
 
 Route::get('/', function () {
     return view('home');
@@ -39,6 +40,13 @@ Route::get('/files', [FileController::class, 'index'])->name('files.index');
 Route::post('/files/upload', [FileController::class, 'upload'])->name('files.upload');
 Route::get('/files/download/{id}', [FileController::class, 'download'])->name('files.download');
 Route::delete('/files/hapus/{id}', [FileController::class, 'hapus'])->name('files.hapus');
+
+//broadcasting
+Route::get('/submit', [SubmitTugasController::class, 'submit']);
+Route::get('/broadcast', fn() => view('broadcast'));
+//Route::get('/submit-tugas', [SubmitTugasController::class, 'submit']);
+//Route::get('/broadcast', function () { return view('broadcast');
+
 
 ?>
 

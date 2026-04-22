@@ -3,21 +3,21 @@
 namespace App\Events;
 
 use Illuminate\Broadcasting\Channel;
-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 
-class TugasDikirim implements ShouldBroadcast
+class TugasDikirim implements ShouldBroadcastNow
 {
-    public $namaMahasiswa;
-    public $judulTugas;
+    public $nama;
+    public $tugas;
 
-    public function __construct($namaMahasiswa, $judulTugas)
+    public function __construct($nama, $tugas)
     {
-        $this->namaMahasiswa = $namaMahasiswa;
-        $this->judulTugas = $judulTugas;
+        $this->nama = $nama;
+        $this->tugas = $tugas;
     }
 
     public function broadcastOn()
     {
-        return new Channel('notifikasi-tugas');
+        return new Channel('notifikasi');
     }
 }
